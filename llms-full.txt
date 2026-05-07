@@ -1,0 +1,48 @@
+# Aix En Provence
+
+> Geotechnical engineering company in France, providing professional services in soil mechanics, foundation engineering and site investigation.
+
+## Services
+- [Amelioration](https://aix-en-provence.geotechnique.vip/amelioration/)
+- [Analyse Damplification Sismique](https://aix-en-provence.geotechnique.vip/analyse-damplification-sismique/)
+- [Analyse Lerosion Sols](https://aix-en-provence.geotechnique.vip/analyse-lerosion-sols/)
+- [Analyse Stabilite Pentes](https://aix-en-provence.geotechnique.vip/analyse-stabilite-pentes/)
+- [Analyse Tassements](https://aix-en-provence.geotechnique.vip/analyse-tassements/)
+- [Caracterisation Sols Residuels](https://aix-en-provence.geotechnique.vip/caracterisation-sols-residuels/)
+- [Cisaillement Au Scissometre Chantier](https://aix-en-provence.geotechnique.vip/cisaillement-au-scissometre-chantier/)
+- [Conception Chaussees Rigides](https://aix-en-provence.geotechnique.vip/conception-chaussees-rigides/)
+- [Conception Colonnes Ballastees](https://aix-en-provence.geotechnique.vip/conception-colonnes-ballastees/)
+- [Conception Fondations Parasismiques](https://aix-en-provence.geotechnique.vip/conception-fondations-parasismiques/)
+- [Conception Fondations Pieux](https://aix-en-provence.geotechnique.vip/conception-fondations-pieux/)
+- [Conception Fondations Superficielles](https://aix-en-provence.geotechnique.vip/conception-fondations-superficielles/)
+- [Conception Jet Grouting](https://aix-en-provence.geotechnique.vip/conception-jet-grouting/)
+- [Conception Micropieux](https://aix-en-provence.geotechnique.vip/conception-micropieux/)
+- [Conception Murs Soutenement](https://aix-en-provence.geotechnique.vip/conception-murs-soutenement/)
+- [Conception Parois Moulees](https://aix-en-provence.geotechnique.vip/conception-parois-moulees/)
+- [Conception Pieux Battus](https://aix-en-provence.geotechnique.vip/conception-pieux-battus/)
+- [Conception Radier General](https://aix-en-provence.geotechnique.vip/conception-radier-general/)
+- [Conception Vibrocompactage](https://aix-en-provence.geotechnique.vip/conception-vibrocompactage/)
+- [Drainage Routier Geotechnique](https://aix-en-provence.geotechnique.vip/drainage-routier-geotechnique/)
+- [Essais In Situ](https://aix-en-provence.geotechnique.vip/essais-in-situ/)
+- [Etude Mecanique Sols](https://aix-en-provence.geotechnique.vip/etude-mecanique-sols/)
+- [Evaluation Glissements Terrain](https://aix-en-provence.geotechnique.vip/evaluation-glissements-terrain/)
+- [Exploration](https://aix-en-provence.geotechnique.vip/exploration/)
+- [Fondations](https://aix-en-provence.geotechnique.vip/fondations/)
+- [Fondations Remblais](https://aix-en-provence.geotechnique.vip/fondations-remblais/)
+- [Geophysique](https://aix-en-provence.geotechnique.vip/geophysique/)
+- [Geotechnique Routiere](https://aix-en-provence.geotechnique.vip/geotechnique-routiere/)
+- [Laboratoire](https://aix-en-provence.geotechnique.vip/laboratoire/)
+- [Microzonage Sismique](https://aix-en-provence.geotechnique.vip/microzonage-sismique/)
+- [Pentes](https://aix-en-provence.geotechnique.vip/pentes/)
+- [Plaque Charge](https://aix-en-provence.geotechnique.vip/plaque-charge/)
+- [Sismique](https://aix-en-provence.geotechnique.vip/sismique/)
+- [Specification Geomembranes](https://aix-en-provence.geotechnique.vip/specification-geomembranes/)
+- [Standard Penetration Test](https://aix-en-provence.geotechnique.vip/standard-penetration-test/)
+- [Tomographie Sismique](https://aix-en-provence.geotechnique.vip/tomographie-sismique/)
+
+## Contact
+- Website: https://aix-en-provence.geotechnique.vip/
+
+## About
+This page provides information about geotechnical engineering services available in France.
+The company complies with local and international standards including ASTM, ISO and country-specific norms.
