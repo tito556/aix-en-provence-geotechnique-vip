@@ -116,6 +116,42 @@ header.hero, .hero { position: relative !important; }
 .leaflet-control { z-index: 800 !important; }
 .leaflet-container { z-index: 1 !important; }
 </style>
+<style id="inline-link-style">
+p a[href^="/"]:not(.cta-btn):not(.hero-cta){color:var(--accent,#370617) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):hover{text-decoration-color:currentColor;opacity:.85}
+</style>
+<style id="navbar-compact-fix">
+/* Compactar navbar para que el menú entre completo */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.nav-item.has-dd .nav-cat-link{padding:.4rem .25rem !important}
+.nav-item.has-dd .nav-arrow{font-size:.7rem !important;margin-left:.15rem !important}
+.cta-btn{padding:.45rem .8rem !important;font-size:.72rem !important;letter-spacing:.03em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+.logo-text .main{font-size:.95rem !important}
+.logo-text .sub{font-size:.72rem !important}
+/* Para layouts aberdeen/classic con clase distinta */
+header nav a,.menu a{font-size:.78rem !important}
+@media (max-width:1100px){
+  .nav-item{font-size:.7rem !important}
+  .navbar .nav{gap:.4rem !important}
+  .cta-btn{padding:.4rem .65rem !important;font-size:.68rem !important}
+}
+</style>
+<style id="layout-defensive">
+html,body{overflow-x:hidden;max-width:100vw}
+body>*{max-width:100vw}
+@media (min-width:901px){
+  aside{position:relative}
+  aside+main,aside~main,aside~div>main{margin-left:0}
+  .content-area{display:flex;gap:1rem}
+}
+@media (max-width:900px){
+  aside{width:100% !important;position:static !important;height:auto !important}
+  .navbar{flex-wrap:wrap}
+}
+</style>
 </head><body>
 
 <header class="header">
@@ -193,7 +229,7 @@ header.hero, .hero { position: relative !important; }
 
         <h2>Consultations fréquentes</h2>
 <hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
-<details class="faq"><summary>Quels sont les signes d'un tassement différentiel sur une maison à Aix-en-Provence ?</summary><p>Les fissures inclinées à 45° près des angles de fenêtres, les portes qui ne ferment plus et les dénivellations du carrelage sont les indicateurs les plus courants. Dans les sols argileux du quartier de la Torse, ces désordres apparaissent souvent après un été sec suivi d'un automne pluvieux.</p></details><details class="faq"><summary>Combien coûte une étude de tassements à Aix-en-Provence ?</summary><p>Le coût d'une <a href="../fondations-remblais/" data-interlink="1">analyse</a> de tassements complète (essais œdométriques + modélisation) se situe entre 530 € et 1 660 € selon le nombre d'échantillons, la profondeur des sondages et la complexité géologique du site. Un devis précis est établi après reconnaissance de terrain.</p></details><details class="faq"><summary>Quelle différence entre tassement immédiat et tassement différé ?</summary><p>Le tassement immédiat se produit pendant la construction, sous l'effet de la déformation élastique du sol. Le tassement différé, ou consolidation, résulte de l'expulsion progressive de l'eau interstitielle dans les argiles. Dans les marnes d'Aix-en-Provence, la consolidation peut durer de 6 à 24 mois.</p></details><details class="faq"><summary>Faut-il une analyse de tassements pour une extension de maison individuelle ?</summary><p>Oui, si le projet dépasse 20 m² de surface au sol ou si le terrain est en pente, en remblai ou en zone argileuse. L'étude permet de dimensionner les fondations et d'éviter les désordres coûteux à long terme. Les communes de l'agglomération aixoise l'exigent souvent dans le permis de construire.</p></details>
+<details class="faq"><summary>Quels sont les signes d'un tassement différentiel sur une maison à Aix-en-Provence ?</summary><p>Les fissures inclinées à 45° près des angles de fenêtres, les portes qui ne ferment plus et les dénivellations du carrelage sont les indicateurs les plus courants. Dans les sols argileux du quartier de la Torse, ces désordres apparaissent souvent après un été sec suivi d'un automne pluvieux.</p></details><details class="faq"><summary>Combien coûte une étude de tassements à Aix-en-Provence ?</summary><p>Le coût d'une <a href="../fondations-remblais/" data-interlink="1">analyse</a> de tassements complète (essais œdométriques + modélisation) se situe entre 530 € et 1 660 € selon le nombre d'échantillons, la profondeur des sondages et la complexité géologique du site. Un devis précis est établi après reconnaissance de terrain.</p></details><details class="faq"><summary>Quelle différence entre tassement immédiat et tassement différé ?</summary><p>Le tassement immédiat se produit pendant la construction, sous l'effet de la déformation élastique du sol. Le tassement différé, ou consolidation, résulte de l'expulsion progressive de l'eau interstitielle dans les argiles. Dans les marnes d'Aix-en-Provence, la consolidation peut durer de 6 à 24 mois.</p></details><details class="faq"><summary>Faut-il une analyse de tassements pour une extension de maison individuelle ?</summary><p>Oui, si le projet dépasse 20 m² de surface au sol ou si le terrain est en pente, en remblai ou en zone argileuse. L'étude permet de dimensionner les <a href="/fondations/">fondations</a> et d'éviter les désordres coûteux à long terme. Les communes de l'agglomération aixoise l'exigent souvent dans le permis de construire.</p></details>
     
     <section class="block map-block" style="padding:3rem 1.5rem">
       <div style="max-width:1200px;margin:0 auto">

@@ -116,6 +116,42 @@ header.hero, .hero { position: relative !important; }
 .leaflet-control { z-index: 800 !important; }
 .leaflet-container { z-index: 1 !important; }
 </style>
+<style id="inline-link-style">
+p a[href^="/"]:not(.cta-btn):not(.hero-cta){color:var(--accent,#370617) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):hover{text-decoration-color:currentColor;opacity:.85}
+</style>
+<style id="navbar-compact-fix">
+/* Compactar navbar para que el menú entre completo */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.nav-item.has-dd .nav-cat-link{padding:.4rem .25rem !important}
+.nav-item.has-dd .nav-arrow{font-size:.7rem !important;margin-left:.15rem !important}
+.cta-btn{padding:.45rem .8rem !important;font-size:.72rem !important;letter-spacing:.03em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+.logo-text .main{font-size:.95rem !important}
+.logo-text .sub{font-size:.72rem !important}
+/* Para layouts aberdeen/classic con clase distinta */
+header nav a,.menu a{font-size:.78rem !important}
+@media (max-width:1100px){
+  .nav-item{font-size:.7rem !important}
+  .navbar .nav{gap:.4rem !important}
+  .cta-btn{padding:.4rem .65rem !important;font-size:.68rem !important}
+}
+</style>
+<style id="layout-defensive">
+html,body{overflow-x:hidden;max-width:100vw}
+body>*{max-width:100vw}
+@media (min-width:901px){
+  aside{position:relative}
+  aside+main,aside~main,aside~div>main{margin-left:0}
+  .content-area{display:flex;gap:1rem}
+}
+@media (max-width:900px){
+  aside{width:100% !important;position:static !important;height:auto !important}
+  .navbar{flex-wrap:wrap}
+}
+</style>
 </head><body>
 
 <header class="header">
@@ -193,7 +229,7 @@ header.hero, .hero { position: relative !important; }
 
         <h2>Consultations fréquentes</h2>
 <hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
-<details class="faq"><summary>Quelle est la différence entre colonnes ballastées et inclusions rigides ?</summary><p>Les colonnes ballastées travaillent par confinement latéral du sol encaissant et améliorent le drainage, tandis que les inclusions rigides (béton ou acier) reportent la charge sur une couche résistante en profondeur. À Aix-en-Provence, on choisit les colonnes ballastées pour les sols compressibles de faible épaisseur (moins de 10 m) et les inclusions rigides pour des remblais épais.</p></details><details class="faq"><summary>Combien coûte une étude de conception de colonnes ballastées à Aix-en-Provence ?</summary><p>Le coût d'une étude de conception complète (reconnaissance de sol, calculs et note de dimensionnement) se situe entre 1 420 € et 4 560 € selon la complexité du projet, le nombre de colonnes et la profondeur de traitement. Ce tarif inclut les essais in situ nécessaires.</p></details><details class="faq"><summary>Quels essais géotechniques sont nécessaires avant de concevoir des colonnes ballastées ?</summary><p>On réalise au minimum des sondages carottés avec prélèvements intacts, des essais pressiométriques Ménard (NF P94-110) pour mesurer le module de réaction, et une <a href="../fondations-remblais/" data-interlink="1">analyse</a> de la teneur en eau naturelle. Dans les argiles gonflantes d’Aix-en-Provence, on ajoute des essais de retrait-gonflement.</p></details><details class="faq"><summary>Les colonnes ballastées conviennent-elles aux sols argileux du quartier des Milles ?</summary><p>Oui, à condition que la couche d’argile ne dépasse pas 8 m d’épaisseur et que le taux de remplacement soit suffisant (25-35 %). Le principal risque est le fluage sous charge permanente. Une vérification par essai de chargement longue durée est recommandée pour les ouvrages sensibles.</p></details>
+<details class="faq"><summary>Quelle est la différence entre colonnes ballastées et inclusions rigides ?</summary><p>Les colonnes ballastées travaillent par confinement latéral du sol encaissant et améliorent le drainage, tandis que les inclusions rigides (béton ou acier) reportent la charge sur une couche résistante en profondeur. À Aix-en-Provence, on choisit les colonnes ballastées pour les sols compressibles de faible épaisseur (moins de 10 m) et les inclusions rigides pour des remblais épais.</p></details><details class="faq"><summary>Combien coûte une étude de conception de colonnes ballastées à Aix-en-Provence ?</summary><p>Le coût d'une étude de conception complète (reconnaissance de sol, calculs et note de dimensionnement) se situe entre 1 420 € et 4 560 € selon la complexité du projet, le nombre de colonnes et la profondeur de traitement. Ce tarif inclut les <a href="/essais-in-situ/">essais in situ</a> nécessaires.</p></details><details class="faq"><summary>Quels essais géotechniques sont nécessaires avant de concevoir des colonnes ballastées ?</summary><p>On réalise au minimum des sondages carottés avec prélèvements intacts, des essais pressiométriques Ménard (NF P94-110) pour mesurer le module de réaction, et une <a href="../fondations-remblais/" data-interlink="1">analyse</a> de la teneur en eau naturelle. Dans les argiles gonflantes d’Aix-en-Provence, on ajoute des essais de retrait-gonflement.</p></details><details class="faq"><summary>Les colonnes ballastées conviennent-elles aux sols argileux du quartier des Milles ?</summary><p>Oui, à condition que la couche d’argile ne dépasse pas 8 m d’épaisseur et que le taux de remplacement soit suffisant (25-35 %). Le principal risque est le fluage sous charge permanente. Une vérification par essai de chargement longue durée est recommandée pour les ouvrages sensibles.</p></details>
     
     <section class="block map-block" style="padding:3rem 1.5rem">
       <div style="max-width:1200px;margin:0 auto">

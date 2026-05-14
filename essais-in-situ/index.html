@@ -114,6 +114,42 @@ header.hero, .hero { position: relative !important; }
 .leaflet-control { z-index: 800 !important; }
 .leaflet-container { z-index: 1 !important; }
 </style>
+<style id="inline-link-style">
+p a[href^="/"]:not(.cta-btn):not(.hero-cta){color:var(--accent,#370617) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):hover{text-decoration-color:currentColor;opacity:.85}
+</style>
+<style id="navbar-compact-fix">
+/* Compactar navbar para que el menú entre completo */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.nav-item.has-dd .nav-cat-link{padding:.4rem .25rem !important}
+.nav-item.has-dd .nav-arrow{font-size:.7rem !important;margin-left:.15rem !important}
+.cta-btn{padding:.45rem .8rem !important;font-size:.72rem !important;letter-spacing:.03em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+.logo-text .main{font-size:.95rem !important}
+.logo-text .sub{font-size:.72rem !important}
+/* Para layouts aberdeen/classic con clase distinta */
+header nav a,.menu a{font-size:.78rem !important}
+@media (max-width:1100px){
+  .nav-item{font-size:.7rem !important}
+  .navbar .nav{gap:.4rem !important}
+  .cta-btn{padding:.4rem .65rem !important;font-size:.68rem !important}
+}
+</style>
+<style id="layout-defensive">
+html,body{overflow-x:hidden;max-width:100vw}
+body>*{max-width:100vw}
+@media (min-width:901px){
+  aside{position:relative}
+  aside+main,aside~main,aside~div>main{margin-left:0}
+  .content-area{display:flex;gap:1rem}
+}
+@media (max-width:900px){
+  aside{width:100% !important;position:static !important;height:auto !important}
+  .navbar{flex-wrap:wrap}
+}
+</style>
 </head><body>
 
 <header class="header">
@@ -144,7 +180,7 @@ header.hero, .hero { position: relative !important; }
 
         <h2>Méthodologie et portée</h2><div>Selon l'Eurocode 8 (EN 1998-1:2004) et son annexe nationale française NF P06-030, l'analyse d'amplification sismique à Aix-en-Provence doit prendre en compte la sismicité modérée de la zone (accélération de référence agr = 0,8 m/s²) et les effets de site locaux. La méthode consiste à : <ul><li>Mesurer la vitesse des ondes de cisaillement VS30 par MASW ou sismique réfraction pour classer le sol de A à E</li><li>Modéliser la réponse 1D par code SHAKE ou équivalent avec des signaux calibrés sur le séisme de référence</li><li>Déterminer le spectre de réponse élastique au niveau du sol pour le dimensionnement parasismique</li></ul> Ces étapes sont systématiquement couplées à un <a href="../standard-penetration-test/">essai SPT</a> pour corréler la résistance dynamique et valider les hypothèses de module de cisaillement Gmax.</div>
         <figure style="margin:1.5rem auto;max-width:60%;border-radius:6px;overflow:hidden;border:1px solid #E5E5E5"></figure>
-        <h2>Considérations locales</h2><p>Le climat méditerranéen d'Aix-en-Provence alterne longues périodes sèches et épisodes pluvieux intenses, ce qui modifie la teneur en eau des sols argileux et marno-calcaires. Une variation saisonnière du degré de saturation peut faire chuter le module de cisaillement G de 20 à 30 % dans les formations de marnes du Crétacé, augmentant ainsi l'amplification sismique en surface. Les ingénieurs doivent donc planifier les campagnes de mesure des ondes de cisaillement en période représentative (fin d'hiver ou après un orage) pour capturer la condition la plus défavorable et dimensionner la structure en conséquence.</p>
+        <h2>Considérations locales</h2><p>Le climat méditerranéen d'Aix-en-Provence alterne longues périodes sèches et épisodes pluvieux intenses, ce qui modifie la teneur en eau des sols argileux et marno-calcaires. Une variation saisonnière du degré de saturation peut faire chuter le module de cisaillement G de 20 à 30 % dans les formations de marnes du Crétacé, augmentant ainsi l'amplification <a href="/sismique/">sismique</a> en surface. Les ingénieurs doivent donc planifier les campagnes de mesure des ondes de cisaillement en période représentative (fin d'hiver ou après un orage) pour capturer la condition la plus défavorable et dimensionner la structure en conséquence.</p>
 
         
     <section class="block mid-cta-4a63-4a63" style="padding:2rem 0">

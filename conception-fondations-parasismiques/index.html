@@ -116,6 +116,42 @@ header.hero, .hero { position: relative !important; }
 .leaflet-control { z-index: 800 !important; }
 .leaflet-container { z-index: 1 !important; }
 </style>
+<style id="inline-link-style">
+p a[href^="/"]:not(.cta-btn):not(.hero-cta){color:var(--accent,#370617) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):hover{text-decoration-color:currentColor;opacity:.85}
+</style>
+<style id="navbar-compact-fix">
+/* Compactar navbar para que el menú entre completo */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.nav-item.has-dd .nav-cat-link{padding:.4rem .25rem !important}
+.nav-item.has-dd .nav-arrow{font-size:.7rem !important;margin-left:.15rem !important}
+.cta-btn{padding:.45rem .8rem !important;font-size:.72rem !important;letter-spacing:.03em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+.logo-text .main{font-size:.95rem !important}
+.logo-text .sub{font-size:.72rem !important}
+/* Para layouts aberdeen/classic con clase distinta */
+header nav a,.menu a{font-size:.78rem !important}
+@media (max-width:1100px){
+  .nav-item{font-size:.7rem !important}
+  .navbar .nav{gap:.4rem !important}
+  .cta-btn{padding:.4rem .65rem !important;font-size:.68rem !important}
+}
+</style>
+<style id="layout-defensive">
+html,body{overflow-x:hidden;max-width:100vw}
+body>*{max-width:100vw}
+@media (min-width:901px){
+  aside{position:relative}
+  aside+main,aside~main,aside~div>main{margin-left:0}
+  .content-area{display:flex;gap:1rem}
+}
+@media (max-width:900px){
+  aside{width:100% !important;position:static !important;height:auto !important}
+  .navbar{flex-wrap:wrap}
+}
+</style>
 </head><body>
 
 <header class="header">
@@ -144,7 +180,7 @@ header.hero, .hero { position: relative !important; }
 
         <h2>Méthodologie et portée</h2><div>Aix-en-Provence culmine à 173 mètres d'altitude, mais sa topographie variée — du centre historique perché aux plaines de la Durance — crée des effets de site locaux. En cas de séisme, les ondes sismiques s'amplifient dans les vallons alluviaux et s'atténuent sur les plateaux rocheux. Pour caractériser cette réponse, nous utilisons des mesures de vitesse des ondes de cisaillement (Vs30) et croisons ces données avec des sondages. Avant de finaliser un projet, il est courant de réaliser un essai de plaque de charge pour valider le module de réaction du sol sous charge cyclique. Les paramètres clés à mesurer incluent : <ul><li>vitesse des ondes de cisaillement (Vs30) pour la classification du site</li><li>indice de résistance au pénétromètre dynamique</li><li>teneur en eau et plasticité des argiles</li><li>coefficient de réaction vertical (Kv) sous charge statique et cyclique</li></ul></div>
         <figure style="margin:1.5rem auto;max-width:60%;border-radius:6px;overflow:hidden;border:1px solid #E5E5E5"></figure>
-        <h2>Considérations locales</h2><p>Le mistral assèche les argiles du pourtour aixois, provoquant des retraits saisonniers qui fragilisent les fondations superficielles. Combiné à un séisme, ce phénomène de retrait-gonflement amplifie les tassements différentiels et peut déstabiliser une structure. Dans les secteurs de la plaine des Milles ou de Luynes, où le substratum calcaire alterne avec des poches d'argile, la conception parasismique doit intégrer des joints de rupture et des fondations profondes pour dissiper l'énergie sans désordre.</p>
+        <h2>Considérations locales</h2><p>Le mistral assèche les argiles du pourtour aixois, provoquant des retraits saisonniers qui fragilisent les <a href="/fondations/">fondations</a> superficielles. Combiné à un séisme, ce phénomène de retrait-gonflement amplifie les tassements différentiels et peut déstabiliser une structure. Dans les secteurs de la plaine des Milles ou de Luynes, où le substratum calcaire alterne avec des poches d'argile, la conception parasismique doit intégrer des joints de rupture et des fondations profondes pour dissiper l'énergie sans désordre.</p>
 
         
     <section class="block mid-cta-4a63-4a63" style="padding:2rem 0">
