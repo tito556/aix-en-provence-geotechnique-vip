@@ -138,7 +138,7 @@ header nav a,.menu a{font-size:.78rem !important}
 }
 </style>
 <style id="layout-defensive">
-html,body{overflow-x:hidden;max-width:100vw}
+body{overflow-x:clip;max-width:100vw}
 body>*{max-width:100vw}
 @media (min-width:901px){
   aside{position:relative}
@@ -149,6 +149,62 @@ body>*{max-width:100vw}
   aside{width:100% !important;position:static !important;height:auto !important}
   .navbar{flex-wrap:wrap}
 }
+</style>
+<style id="navbar-fixed-override">
+nav.navbar,.header-top,.main-header{position:fixed !important;top:0 !important;left:0 !important;right:0 !important;z-index:1010 !important}
+body{padding-top:60px}
+.hero,.hero-inner,header.hero{padding-top:1rem !important}
+@media (max-width:900px){body{padding-top:90px}}
+</style>
+<style id="sidebar-hover-fix-v2">
+/* Adaptativo: hover preserva color heredado (white en dark sidebar, dark en light) */
+aside .cat-name:hover,aside .sb-home:hover,aside .cat-sub-wrap a:hover,
+aside nav a:hover{color:inherit !important;text-decoration:underline !important;text-underline-offset:3px}
+aside .cat-name,aside .sb-home,aside nav a{color:inherit}
+/* Bg sutil que funciona en cualquier fondo */
+aside .cat-name:hover,aside .sb-home:hover{background:rgba(127,127,127,.12) !important}
+aside .cat-sub-wrap a:hover{background:rgba(127,127,127,.08) !important}
+</style>
+<style id="cat-toggle-no-box">
+.cat-toggle{width:auto !important;min-width:32px;border:none !important;border-left:none !important;background:transparent !important;box-shadow:none !important;padding:.3rem .5rem !important}
+.cat-toggle:hover{background:rgba(127,127,127,.12) !important}
+.cat-arrow{display:inline-block}
+</style>
+<style id="nav-arrow-no-box">
+.nav-arrow,.nav-arrow:hover,.nav-arrow:focus{background:transparent !important;border:none !important;outline:none !important;padding:0 .15rem !important;color:inherit !important;cursor:pointer !important;box-shadow:none !important}
+</style>
+<style id="post-fixes-v2">
+/* Inline links visibles en prosa */
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):not(.nav-contact-btn){color:var(--accent,#1d4ed8) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):not(.nav-contact-btn):hover{text-decoration-color:currentColor;opacity:.85}
+/* Sidebar hover adaptive */
+aside .cat-name:hover,aside .sb-home:hover,aside .cat-sub-wrap a:hover,
+aside nav a:hover{color:inherit !important;text-decoration:underline !important;text-underline-offset:3px}
+aside .cat-name,aside .sb-home,aside nav a{color:inherit}
+aside .cat-name:hover,aside .sb-home:hover{background:rgba(127,127,127,.12) !important}
+/* Cat-toggle sin caja */
+.cat-toggle{width:auto !important;min-width:32px;border:none !important;border-left:none !important;background:transparent !important;box-shadow:none !important;padding:.3rem .5rem !important}
+.cat-toggle:hover{background:rgba(127,127,127,.12) !important}
+/* Nav-arrow sin caja */
+.nav-arrow,.nav-arrow:hover,.nav-arrow:focus{background:transparent !important;border:none !important;outline:none !important;padding:0 .15rem !important;color:inherit !important;cursor:pointer !important;box-shadow:none !important}
+/* Navbar compacto */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+/* Layout defensive */
+body{overflow-x:clip;max-width:100vw}
+body>*{max-width:100vw}
+</style>
+<style id="nav-fix-v3">
+nav.navbar, header nav, .nav-bar, .top-nav { font-size: 1rem !important; }
+nav.navbar a, header nav a, .nav-bar a, .top-nav a, .nav-cat-link, .nav-item a { font-size: 1rem !important; color: #FFFFFF !important; font-weight: 500 !important; }
+nav.navbar a:hover, header nav a:hover, .nav-cat-link:hover { color: #FCD34D !important; text-decoration: underline; }
+nav[aria-label="breadcrumb"], .crumb, .breadcrumb { color: rgba(255,255,255,.85) !important; font-size: .82rem !important; }
+nav[aria-label="breadcrumb"] a, .crumb a, .breadcrumb a { color: #FFFFFF !important; text-decoration: underline; font-weight: 600; }
+nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important; }
+.crumb a[href="/"], .breadcrumb a[href="/"], a.home-link { color: #FFFFFF !important; }
+.brand-name, .logo-text, .main, .brand { color: #FFFFFF !important; }
 </style>
 </head><body>
 
@@ -181,11 +237,11 @@ body>*{max-width:100vw}
       </div>
     </section>
 <section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto">
-<img src="/img/microzonificacion-sismica-3.webp" alt="Géophysique à Aix-en-Provence" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
+<img src="/img/amplificacion-sismica-1.webp" alt="Géophysique à Aix-en-Provence" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
 <p>La géophysique appliquée que nous déployons à Aix-en-Provence couvre l’intégralité des reconnaissances non destructives du sous-sol, en s’adaptant aux formations géologiques locales complexes – alluvions quaternaires de l’Arc, calcaires urgoniens fissurés ou marnes stampiennes. Nos campagnes s’inscrivent dans le cadre strict de la norme AFNOR NF P 94-500 pour les missions géotechniques et s’appuient sur les recommandations du guide AFTES pour les reconnaissances en milieu urbain. L’interprétation croisée des données avec notre pôle <a href="/exploration/">exploration</a> permet de caler les modèles géophysiques sur des sondages destructifs, tandis que le lien direct avec notre <a href="/laboratoire/">laboratoire</a> de mécanique des sols garantit une validation des hypothèses de comportement mécanique par des essais physiques.</p>
 <p>Les méthodes mises en œuvre respectent les protocoles définis par les normes NF P 94-160 et NF EN ISO 22476 pour le couplage avec les essais in situ. Nous utilisons principalement la tomographie de résistivité électrique (ERT) pour imager les variations lithologiques et les circulations d’eau, le MASW (Multichannel Analysis of Surface Waves) pour obtenir le profil de vitesse des ondes de cisaillement Vs30 indispensable aux études parasismiques selon l’Eurocode 8, et le géoradar pour la détection fine de réseaux ou de cavités karstiques. Chaque profil géophysique est systématiquement corrélé avec nos <a href="/essais-in-situ/">essais in situ</a>, notamment les essais pressiométriques Ménard, afin de convertir les résistivités ou vitesses sismiques en modules de déformation directement utilisables par les bureaux d’études. La calibration des modèles s’appuie également sur les résultats de notre <a href="/standard-penetration-test/">essai SPT</a> lorsque les horizons sableux ou limoneux doivent être caractérisés en densité relative.</p>
 <p>Sur le bassin aixois, nos interventions géophysiques répondent à des problématiques récurrentes de diagnostic avant construction, de recherche de vides karstiques sous les plateformes logistiques de la Duranne, ou d’évaluation des épaisseurs de remblais dans les opérations de renouvellement urbain. Pour les projets de fondations profondes en zone sismique, le couplage MASW-ERT fournit une image continue du toit du substratum calcaire et des anomalies de vitesse, évitant les surcoûts liés à un maillage de sondages mécaniques trop lâche. La caractérisation des formations superficielles s’effectue souvent en complément d’un <a href="/plaque-charge/">essai de plaque de charge (PLT)</a> pour valider la portance des plates-formes. Dans les secteurs de coteaux argileux sensibles au retrait-gonflement, la cartographie de résistivité permet de délimiter avec précision les zones de sols gonflants et d’orienter les prescriptions de l’étude géotechnique G2 AVP.</p>
-<img src="/img/amplificacion-sismica-3.webp" alt="Géophysique à Aix-en-Provence" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
+<img src="/img/microzonificacion-sismica-1.webp" alt="Géophysique à Aix-en-Provence" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
 
 <p>Le processus débute par une analyse documentaire et géologique du site, suivie de l’acquisition sur le terrain avec des dispositifs multi-électrodes ou des flûtes sismiques adaptées à l’en</p></div></section></main>
 </div>
@@ -201,7 +257,7 @@ body>*{max-width:100vw}
     if(!el)return;
     var map=L.map(el).setView([43.5298424,5.4474738],12);
     L.tileLayer('https://{s}.tile-4a63.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap',maxZoom:18}).addTo(map);
-    L.marker([43.5298424,5.4474738],{icon:L.icon({iconUrl:'/css/images/marker-icon.png',iconRetinaUrl:'/css/images/marker-icon-2x.png',shadowUrl:'/css/images/marker-shadow.png',iconSize:[25,41],iconAnchor:[12,41],popupAnchor:[1,-34],shadowSize:[41,41]})}).addTo(map).bindPopup("Aix-en-Provence").openPopup();
+    L.marker([43.5298424,5.4474738],{icon:L.divIcon({html:'<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 36\" width=\"24\" height=\"36\"><path d=\"M12 0C5.4 0 0 5.4 0 12c0 9 12 24 12 24s12-15 12-24c0-6.6-5.4-12-12-12z\" fill=\"#E11D48\" stroke=\"#FFF\" stroke-width=\"1.5\"/><circle cx=\"12\" cy=\"12\" r=\"4\" fill=\"#FFF\"/></svg>',className:'',iconSize:[24,36],iconAnchor:[12,36],popupAnchor:[0,-32]})}).addTo(map).bindPopup("Aix-en-Provence").openPopup();
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
 })();
