@@ -206,6 +206,188 @@ nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important
 .crumb a[href="/"], .breadcrumb a[href="/"], a.home-link { color: #FFFFFF !important; }
 .brand-name, .logo-text, .main, .brand { color: #FFFFFF !important; }
 </style>
+<style id="comprehensive-defaults-v1">
+/* Reset basico */
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; margin: 0; line-height: 1.6; color: #1E293B; background: #F8FAFC; }
+
+/* Layout wrapper */
+.layout, .main-wrapper, .content-area { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+.header, .main-header, header.main-header { background: #0F172A; color: #FFF; padding: 1rem 1.5rem; margin-bottom: 1.5rem; }
+.header-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.header-email { color: #FCD34D; text-decoration: none; }
+.brand, .brand-text, .brand-name { color: #FFFFFF; font-weight: 700; font-size: 1.25rem; line-height: 1.1; }
+.brand-city { color: #94A3B8; font-size: .85rem; display: block; }
+.brand-logo { display: inline-block; vertical-align: middle; }
+
+/* Breadcrumb / crumb */
+.crumb, .breadcrumb { padding: .5rem 0; font-size: .85rem; color: rgba(255,255,255,.85); }
+.crumb a, .breadcrumb a { color: #FFFFFF; text-decoration: underline; }
+.crumb a:hover, .breadcrumb a:hover { color: #FCD34D; }
+
+/* Body wrapper - layout flex */
+.layout { display: grid; grid-template-columns: 240px 1fr; gap: 1.5rem; margin: 1.5rem auto; padding: 0 1.5rem; max-width: 1280px; }
+@media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+
+/* Sidebar */
+.sb-home, .sidebar, aside { background: #1E293B; color: #FFFFFF; border-radius: 10px; padding: 1rem; }
+.sb-home a, .sidebar a, aside a { color: #FFFFFF; text-decoration: none; display: block; padding: .5rem .75rem; border-radius: 6px; transition: background .15s; }
+.sb-home a:hover, .sidebar a:hover { background: rgba(255,255,255,.08); }
+.cat-row, .cat-item { display: flex; align-items: center; justify-content: space-between; padding: .4rem .75rem; }
+.cat-name { color: #FFFFFF; font-weight: 500; flex: 1; }
+.cat-toggle, .cat-arrow { background: transparent; border: 0; color: #FFFFFF; cursor: pointer; padding: .2rem .4rem; }
+.cat-sub { padding-left: 1rem; }
+.cat-sub a { font-size: .85rem; color: rgba(255,255,255,.85); padding: .3rem .75rem; }
+
+/* Block / section base */
+.block { padding: 2rem 1.5rem; }
+.block > div { max-width: 1200px; margin: 0 auto; }
+.map-block { padding: 2rem 0; background: #F1F5F9; }
+.map-wrap { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+#mapa-ciudad { width: 100%; height: 380px; border-radius: 8px; }
+
+/* Cards / grid */
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.card { background: #FFF; border: 1px solid #E5E7EB; border-radius: 10px; padding: 1.2rem; text-decoration: none; color: inherit; box-shadow: 0 1px 2px rgba(0,0,0,.04); transition: all .2s; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,.08); border-color: #1D4ED8; }
+
+/* H1/H2 */
+h1 { color: #0F172A; font-size: 1.85rem; margin: 1rem 0 1.5rem; line-height: 1.2; }
+h2 { color: #1E293B; font-size: 1.35rem; margin: 1.5rem 0 .8rem; font-weight: 700; }
+h3 { color: #1E293B; font-size: 1.1rem; margin: 1rem 0 .5rem; }
+p { margin: 0 0 1rem; color: #374151; }
+a { color: #1D4ED8; }
+
+/* Mid CTA */
+.mid-cta { padding: 2rem 0; }
+.mid-cta > div { max-width: 720px; margin: 0 auto; background: linear-gradient(135deg, #1D4ED815, #1D4ED808); border-left: 4px solid #1D4ED8; padding: 1.6rem 1.8rem; border-radius: 8px; text-align: center; }
+
+/* Footer */
+footer, .footer { background: #0F172A; color: #94A3B8; padding: 1.5rem; text-align: center; margin-top: 2rem; font-size: .85rem; }
+footer a, .footer a { color: #FCD34D; }
+
+/* Authority refs */
+.authority-refs { color: #94A3B8; font-size: .8rem; }
+.updated-info { color: #94A3B8; font-size: .8rem; font-style: italic; }
+</style>
+<style id="critical-visual-fix-v1">
+/* Sidebar: ancho 260px + adaptive font size */
+.sb-home, .sidebar, aside.sidebar, aside { width: 260px !important; }
+.sb-home .cat-row, .sidebar .cat-row, aside .cat-row, .nav-cat-row { font-size: .92rem; line-height: 1.25; }
+.sb-home .cat-name, .sidebar .cat-name, .cat-name { font-size: .92rem; line-height: 1.25; word-break: keep-all; hyphens: auto; }
+/* Labels muy largos: font-size más chico */
+.cat-name:where(:has(*)),
+.cat-row a, .nav-cat-link { white-space: normal; }
+
+/* Remover email sticky position:fixed (debe estar en flow del header) */
+.header-email[style*="position:fixed"],
+.header-email[style*="position: fixed"],
+a.header-email:where([href^="mailto:"]):not(footer a):not(.mid-cta a) { position: static !important; }
+header .header-email, header a[href^="mailto:"] { position: static !important; top: auto !important; right: auto !important; }
+
+/* Brand contrast: text-shadow para legibilidad */
+.brand, .brand-name, .brand-text, .logo-text, .main-header .brand {
+  text-shadow: 0 1px 3px rgba(0,0,0,.7);
+  color: #FFFFFF !important;
+}
+
+/* Header z-index alto (sobre map/content) */
+header, .header, .main-header, .top-header { position: relative; z-index: 100; }
+
+/* Map z-index bajo (debajo de navbar) */
+#mapa-ciudad, .map-block { z-index: 1; position: relative; }
+.leaflet-pane { z-index: 2; }
+
+/* Email contacto en navbar: contraste + visibilidad */
+.header-email, header .header-email, header a[href^="mailto:"] {
+  color: #FCD34D !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+  font-weight: 500;
+}
+
+/* Servicios card grid: no incluir folders garbage */
+.cards-grid .card[href$="/css/"],
+.cards-grid .card[href$="/js/"],
+.cards-grid .card[href$="/img/"],
+.cards-grid .card[href$="/leaflet/"] { display: none !important; }
+
+/* Hero image santiago: contain en lugar de cover */
+.hero-bg, .hero-image { object-fit: contain; }
+</style>
+<style id="critical-fix-v2">
+/* Header NO sticky en sub layouts */
+header.main-header, header[role="banner"], body > header {
+  position: static !important;
+  top: auto !important;
+}
+/* Sidebar sticky, pero start después del header (más espacio) */
+.sb-home, aside.sidebar, .sidebar {
+  position: sticky !important;
+  top: 1rem !important;
+  z-index: 5 !important;
+  width: 260px !important;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+}
+/* Header z-index alto siempre */
+header.main-header, header[role="banner"], body > header {
+  z-index: 100 !important;
+  position: relative !important;
+}
+/* Sidebar font-size más chico en labels largos */
+.cat-name, .cat-row a, .nav-cat-link {
+  font-size: .88rem !important;
+  line-height: 1.2 !important;
+  hyphens: auto;
+  word-break: break-word;
+}
+/* Sidebar items NO superpongan header */
+.layout, .main-wrapper, .content-area { padding-top: 1rem; }
+/* Header altura mínima visible */
+header.main-header, header[role="banner"], body > header { min-height: 80px; }
+/* Brand SIEMPRE visible (no cortado) */
+.brand, .brand-name, .brand-text, .logo-text {
+  text-shadow: 0 1px 3px rgba(0,0,0,.8) !important;
+  color: #FFFFFF !important;
+  font-weight: 700;
+}
+/* Email contraste alto */
+.header-email, header a[href^="mailto:"] {
+  color: #FCD34D !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,.8) !important;
+  font-weight: 600;
+}
+</style>
+<style id="kill-sticky-header-v1">
+/* MATAR position:fixed legacy de fase-i-fixes */
+nav.navbar, .header-top, .main-header, header.header, .header {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+}
+body { padding-top: 0 !important; }
+
+/* Sidebar sticky pero NO encima del header */
+.sb-home, aside.sidebar, .sidebar, aside {
+  position: sticky !important;
+  top: 1rem !important;
+  z-index: 2 !important;
+  width: 260px !important;
+}
+
+/* Cards en grid: layout flex/grid sin colapsar */
+.cards-grid, [style*="display:grid"][style*="auto-fill"] {
+  margin-top: 1rem !important;
+}
+
+/* Layout main: padding-top para clearance */
+main, .main-content, .content-area, .layout > *:not(aside):not(.sidebar) {
+  padding-top: 0 !important;
+}
+</style>
 </head><body>
 
 <header class="header">
@@ -224,7 +406,7 @@ nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important
 </header>
 
 <div class="layout">
-    <aside><a href="/" class="sb-home">Accueil</a><div class="cat-item" data-cat="exploration"><div class="cat-row"><a href="../exploration/" class="cat-name">Exploration</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Exploration"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="../standard-penetration-test/">Essai SPT (Standard Penetration Test)</a></div></div><div class="cat-item" data-cat="essais-in-situ"><div class="cat-row"><a href="../essais-in-situ/" class="cat-name">Essais in situ</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Essais in situ"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="../plaque-charge/">Essai de plaque de charge (PLT)</a><a href="../cisaillement-au-scissometre-chantier/">Essai de cisaillement au scissomètre de chantier (Vane Shear Test)</a></div></div><div class="cat-item" data-cat="laboratoire"><div class="cat-row"><a href="../laboratoire/" class="cat-name">Laboratoire</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Laboratoire"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="../caracterisation-sols-residuels/">Caractérisation des sols résiduels</a><a href="../etude-mecanique-sols/">Étude de mécanique des sols</a></div></div><div class="cat-item" data-cat="geophysique"><div class="cat-row"><a href="../geophysique/" class="cat-name">Géophysique</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Géophysique"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="../tomographie-sismique/">Tomographie sismique (réfraction/réflexion)</a></div></div><div class="cat-item" data-cat="fondations"><div class="cat-row"><a href="../fondations/" class="cat-name">Fondations</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Fondations"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="../analyse-tassements/">Analyse de tassements</a><a href="../fondations-remblais/">Fondations sur remblais (analyse)</a><a href="../conception-fondations-superficielles/">Conception de fondations superficielles</a><a href="../conception-fondations-parasismiques/">Conception de fondations parasismiques</a><a href="../conception-fondations-pieux/">Conception de fondations sur pieux</a><a href="../conception-radier-general/">Conception de radier général</a><a href="../conception-micropieux/">Conception de micropieux</a><a href="../conception-pieux-battus/">Conception de pieux battus</a></div></div><div class="cat-item" data-cat="pentes"><div class="cat-row"><a href="../pentes/" class="cat-name">Pentes</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Pentes"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="../analyse-lerosion-sols/">Analyse de l'érosion des sols</a><a href="../analyse-stabilite-pentes/">Analyse de stabilité des pentes</a><a href="../conception-murs-soutenement/">Conception de murs de soutènement</a><a href="../conception-parois-moulees/">Conception de parois moulées</a><a href="../evaluation-glissements-terrain/">Évaluation des glissements de terrain</a></div></div><div class="cat-item" data-cat="amelioration"><div class="cat-row"><a href="../amelioration/" class="cat-name">Amélioration</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Amélioration"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="../conception-colonnes-ballastees/">Conception de colonnes ballastées (stone columns)</a><a href="../conception-jet-grouting/">Conception de jet grouting</a><a href="../conception-vibrocompactage/">Conception de vibrocompactage</a><a href="../specification-geomembranes/">Spécification des géomembranes</a></div></div><div class="cat-item" data-cat="geotechnique-routiere"><div class="cat-row"><a href="../geotechnique-routiere/" class="cat-name">Routier</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Routier"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="../conception-chaussees-rigides/">Conception de chaussées rigides</a><a href="../drainage-routier-geotechnique/">Drainage routier géotechnique</a></div></div><div class="cat-item" data-cat="sismique"><div class="cat-row"><a href="../sismique/" class="cat-name">Sismique</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Sismique"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="../analyse-damplification-sismique/">Analyse d'amplification sismique</a><a href="../microzonage-sismique/">Microzonage sismique</a></div></div></aside>
+    <aside><a href="/" class="sb-home">Accueil</a><div class="cat-item" data-cat="exploration"><div class="cat-row"><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Exploration"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden></div></div><div class="cat-item" data-cat="essais-in-situ"><div class="cat-row"><a href="../essais-in-situ/" class="cat-name">Essais in situ</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Essais in situ"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden></div></div><div class="cat-item" data-cat="laboratoire"><div class="cat-row"><a href="../laboratoire/" class="cat-name">Laboratoire</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Laboratoire"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden></div></div><div class="cat-item" data-cat="geophysique"><div class="cat-row"><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Géophysique"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden></div></div><div class="cat-item" data-cat="fondations"><div class="cat-row"><a href="../fondations/" class="cat-name">Fondations</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Fondations"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden><a href="../fondations-remblais/">Fondations sur remblais (analyse)</a><a href="../conception-fondations-superficielles/">Conception de fondations superficielles</a><a href="../conception-fondations-parasismiques/">Conception de fondations parasismiques</a><a href="../conception-fondations-pieux/">Conception de fondations sur pieux</a><a href="../conception-micropieux/">Conception de micropieux</a><a href="../conception-pieux-battus/">Conception de pieux battus</a></div></div><div class="cat-item" data-cat="pentes"><div class="cat-row"><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Pentes"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden></div></div><div class="cat-item" data-cat="amelioration"><div class="cat-row"><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Amélioration"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden></div></div><div class="cat-item" data-cat="geotechnique-routiere"><div class="cat-row"><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Routier"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden></div></div><div class="cat-item" data-cat="sismique"><div class="cat-row"><a href="../sismique/" class="cat-name">Sismique</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Sismique"><span class="cat-arrow">▼</span></button></div><div class="cat-sub" hidden></div></div></aside>
     <main>
         <p>À Aix-en-Provence, la conception des fondations doit s’adapter à une géologie contrastée mêlant molasses miocènes, colluvions argileuses et remblais anthropiques en centre-ville. Cette catégorie regroupe l’ensemble des études géotechniques nécessaires pour garantir la stabilité des ouvrages, depuis l’<a href="/analyse-tassements/">analyse de tassements</a> prévisionnels jusqu’au dimensionnement de solutions adaptées aux sols évolutifs. Le respect de la norme NF P 94-261 sur les fondations superficielles et des règles parasismiques de l’Eurocode 8 s’impose dans ce secteur classé en zone de sismicité modérée.</p><p>Ces prestations accompagnent autant les maisons individuelles sur terrain sensible que les programmes collectifs ou les extensions de bâtiments existants. La présence fréquente de remblais hétérogènes conduit souvent à préconiser des <a href="/conception-fondations-pieux/">fondations sur pieux</a> ou un <a href="/conception-radier-general/">radier général</a> rigide, tandis que les projets en site contraint mobilisent des <a href="/conception-micropieux/">micropieux</a> pour reprendre les charges sans déstabiliser les mitoyens.</p>
 <section class="block mid-cta-4a63-4a63" style="padding:2rem 0">
@@ -257,6 +439,6 @@ nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
 })();
 </script>
-<footer style="background:#0A0A0A;color:rgba(255,255,255,.85);padding:3rem 1.5rem 2rem"><div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem"><div><h4 style="color:#FFF;font-size:1rem;margin:0 0 .8rem">AIX EN PROVENCE FR</h4><p style="margin:0;font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.6">Aix-en-Provence, France</p></div><div><h4 style="color:#FFF;font-size:.92rem;margin:0 0 .8rem">SERVICES</h4><a href="../etude-mecanique-sols/" style="color:rgba(255,255,255,.75);text-decoration:none;display:block;padding:.25rem 0">Services</a><a href="../standard-penetration-test/" style="color:rgba(255,255,255,.75);text-decoration:none;display:block;padding:.25rem 0">SPT</a><a href="/" style="color:rgba(255,255,255,.75);text-decoration:none;display:block;padding:.25rem 0">Test pits</a></div><div><h4 style="color:#FFF;font-size:.92rem;margin:0 0 .8rem">INQUIRE</h4><p style="margin:0;font-size:.9rem;line-height:1.8"><a href="mailto:contact@geotechnique.vip" style="color:#FFF;text-decoration:none">contact@geotechnique.vip</a></p></div></div><div style="max-width:1100px;margin:2rem auto 0;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.8rem;color:rgba(255,255,255,.5)">© 2026 Géotechnique Fr. Tous droits réservés.</div><div data-updated="2026-03-29" style="font-size:.78rem;color:rgba(255,255,255,.6);margin-top:.8rem">Dernière mise à jour: 2026-03-08</div><div data-authority-refs class="authority-refs" style="text-align:center;font-size:.8rem;padding:.5rem 0;opacity:.6"><strong>Références:</strong> <a href="https://www.afnor.org/" rel="nofollow noopener" target="_blank">Normes AFNOR</a> · <a href="https://eurocodes.jrc.ec.europa.eu/showpage.php?id=132" rel="nofollow noopener" target="_blank">Eurocode 7</a> · <a href="https://www.iso.org/committee/49802.html" rel="nofollow noopener" target="_blank">ISO Géotechnique</a></div></footer>
+<footer style="background:#0A0A0A;color:rgba(255,255,255,.85);padding:3rem 1.5rem 2rem"><div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem"><div><h4 style="color:#FFF;font-size:1rem;margin:0 0 .8rem">AIX EN PROVENCE FR</h4><p style="margin:0;font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.6">Aix-en-Provence, France</p></div><div><h4 style="color:#FFF;font-size:.92rem;margin:0 0 .8rem">SERVICES</h4><a href="/" style="color:rgba(255,255,255,.75);text-decoration:none;display:block;padding:.25rem 0">Test pits</a></div><div><h4 style="color:#FFF;font-size:.92rem;margin:0 0 .8rem">INQUIRE</h4><p style="margin:0;font-size:.9rem;line-height:1.8"><a href="mailto:contact@geotechnique.vip" style="color:#FFF;text-decoration:none">contact@geotechnique.vip</a></p></div></div><div style="max-width:1100px;margin:2rem auto 0;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.8rem;color:rgba(255,255,255,.5)">© 2026 Géotechnique Fr. Tous droits réservés.</div><div data-updated="2026-03-29" style="font-size:.78rem;color:rgba(255,255,255,.6);margin-top:.8rem">Dernière mise à jour: 2026-03-08</div><div data-authority-refs class="authority-refs" style="text-align:center;font-size:.8rem;padding:.5rem 0;opacity:.6"><strong>Références:</strong> <a href="https://www.afnor.org/" rel="nofollow noopener" target="_blank">Normes AFNOR</a> · <a href="https://eurocodes.jrc.ec.europa.eu/showpage.php?id=132" rel="nofollow noopener" target="_blank">Eurocode 7</a> · <a href="https://www.iso.org/committee/49802.html" rel="nofollow noopener" target="_blank">ISO Géotechnique</a></div></footer>
 
 <script>(function(){document.querySelectorAll(".cat-toggle").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();var s=b.parentElement.parentElement.querySelector(".cat-sub");var ex=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",!ex);if(s){s.hidden=ex;}});});})();</script></body></html>
